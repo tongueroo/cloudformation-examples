@@ -81,6 +81,12 @@ Parameters:
     Default: 0.0.0.0/0
     AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+  HostedZoneName:
+    Description: The route53 HostedZoneName. For example, "mydomain.com."  Don't forget the period at the end.
+    Type: String
+  Subdomain:
+    Description: The subdomain of the dns entry. For example, hello -> hello.mydomain.com, hello is the subdomain.
+    Type: String
 Mappings:
   AWSInstanceType2Arch:
     t1.micro:
@@ -385,6 +391,16 @@ Resources:
         ToPort: '22'
         CidrIp:
           Ref: SSHLocation
+  DnsRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneName: !Ref 'HostedZoneName'
+      Comment: DNS name for my instance.
+      Name: !Join ['', [!Ref 'Subdomain', ., !Ref 'HostedZoneName']]
+      Type: CNAME
+      TTL: '900'
+      ResourceRecords:
+      - !GetAtt EC2Instance.PublicIp
 Outputs:
   InstanceId:
     Description: InstanceId of the newly created EC2 instance
