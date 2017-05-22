@@ -8,7 +8,7 @@ These are some very basic raw CloudFormation template examples.  This examples a
 4. [A Simple Introduction to AWS CloudFormation Part 4: Change Sets = Dry Run Mode](https://medium.com/boltops/a-simple-introduction-to-cloudformation-part-4-change-sets-dry-run-mode-c14e41dfeab7)
 
 
-## Comands from Tutorials
+## Commands from Tutorials
 
 ### Tutorial 1
 
