@@ -1,6 +1,6 @@
 # CloudFormation Examples
 
-These are some very basic raw CloudFormation template examples.  This examples are part of a blog tutorial.
+These are some very basic raw CloudFormation template examples.  This examples are part of blog tutorials.
 
 1. [A Simple Introduction to AWS CloudFormation Part 1: EC2 Instance](https://medium.com/boltops/a-simple-introduction-to-aws-cloudformation-part-1-1694a41ae59d)
 2. [A Simple Introduction ot AWS CloudFormation Part 2: EC2 Instance and Route53](https://medium.com/boltops/a-simple-introduction-to-aws-cloudformation-part-2-d6d95ed30328)
