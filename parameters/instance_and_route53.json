@@ -9,7 +9,7 @@
   },
   {
     "ParameterKey": "HostedZoneName",
-    "ParameterValue": "sub.tongueroo.com."
+    "ParameterValue": "example.local."
   },
   {
     "ParameterKey": "Subdomain",

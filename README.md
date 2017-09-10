@@ -27,9 +27,9 @@ aws cloudformation create-stack --template-body file://templates/instance_and_ro
 ### Tutorial 3
 
 ```bash
-$ aws cloudformation create-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
+aws cloudformation create-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
 
-$ aws cloudformation update-stack --stack-name example --template-body file://templates/instance_and_route53.yml --parameters file://parameters/instance_and_route53.json
+aws cloudformation update-stack --stack-name example --template-body file://templates/instance_and_route53.yml --parameters file://parameters/instance_and_route53.json
 
 aws cloudformation update-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
 ```
@@ -37,13 +37,13 @@ aws cloudformation update-stack --stack-name example --template-body file://temp
 ### Tutorial 4
 
 ```bash
-$ aws cloudformation create-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
+aws cloudformation create-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
 
-$ aws cloudformation create-change-set --stack-name example --template-body file://templates/instance_and_route53.yml --parameters file://parameters/instance_and_route53.json --change-set-name changeset-1
+aws cloudformation create-change-set --stack-name example --template-body file://templates/instance_and_route53.yml --parameters file://parameters/instance_and_route53.json --change-set-name changeset-1
 
-$ aws cloudformation describe-change-set --stack-name example --change-set-name changeset-1 | jq '.Changes[]'
+aws cloudformation describe-change-set --stack-name example --change-set-name changeset-1 | jq '.Changes[]'
 
-$ aws cloudformation execute-change-set --stack-name example --change-set-name changeset-1
+aws cloudformation execute-change-set --stack-name example --change-set-name changeset-1
 ```
 
 
