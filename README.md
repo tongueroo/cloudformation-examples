@@ -13,33 +13,33 @@ These are some very basic raw CloudFormation template examples.  This examples a
 ### Tutorial 1
 
 ```bash
-aws cloudformation create-stack --template-body file://templates/single_instance.yml --stack-name single-instance --parameters ParameterKey=KeyName,ParameterValue=tutorial ParameterKey=InstanceType,ParameterValue=t2.micro
+aws cloudformation create-stack --template-body file://templates/single-instance.yml --stack-name single-instance --parameters ParameterKey=KeyName,ParameterValue=tutorial ParameterKey=InstanceType,ParameterValue=t2.micro
 ```
 
 ### Tutorial 2
 
 ```bash
-aws cloudformation create-stack --template-body file://templates/single_instance.yml --stack-name --stack-name route53-$(date +%s) --parameters ParameterKey=KeyName,ParameterValue=tutorial ParameterKey=InstanceType,ParameterValue=t2.micro ParameterKey=HostedZoneName,ParameterValue=sub.tongueroo.com. ParameterKey=Subdomain,ParameterValue=testsubdomain
+aws cloudformation create-stack --template-body file://templates/single-instance.yml --stack-name --stack-name route53-$(date +%s) --parameters ParameterKey=KeyName,ParameterValue=tutorial ParameterKey=InstanceType,ParameterValue=t2.micro ParameterKey=HostedZoneName,ParameterValue=sub.tongueroo.com. ParameterKey=Subdomain,ParameterValue=testsubdomain
 
-aws cloudformation create-stack --template-body file://templates/instance_and_route53.yml --stack-name route53-$(date +%s) --parameters file://parameters/instance_and_route53.json
+aws cloudformation create-stack --template-body file://templates/instance-and-route53.yml --stack-name route53-$(date +%s) --parameters file://parameters/instance-and-route53.json
 ```
 
 ### Tutorial 3
 
 ```bash
-aws cloudformation create-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
+aws cloudformation create-stack --stack-name example --template-body file://templates/single-instance.yml --parameters file://parameters/single-instance.json
 
-aws cloudformation update-stack --stack-name example --template-body file://templates/instance_and_route53.yml --parameters file://parameters/instance_and_route53.json
+aws cloudformation update-stack --stack-name example --template-body file://templates/instance-and-route53.yml --parameters file://parameters/instance-and-route53.json
 
-aws cloudformation update-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
+aws cloudformation update-stack --stack-name example --template-body file://templates/single-instance.yml --parameters file://parameters/single-instance.json
 ```
 
 ### Tutorial 4
 
 ```bash
-aws cloudformation create-stack --stack-name example --template-body file://templates/single_instance.yml --parameters file://parameters/single_instance.json
+aws cloudformation create-stack --stack-name example --template-body file://templates/single-instance.yml --parameters file://parameters/single-instance.json
 
-aws cloudformation create-change-set --stack-name example --template-body file://templates/instance_and_route53.yml --parameters file://parameters/instance_and_route53.json --change-set-name changeset-1
+aws cloudformation create-change-set --stack-name example --template-body file://templates/instance-and-route53.yml --parameters file://parameters/instance-and-route53.json --change-set-name changeset-1
 
 aws cloudformation describe-change-set --stack-name example --change-set-name changeset-1 | jq '.Changes[]'
 
