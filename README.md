@@ -1,6 +1,6 @@
 # CloudFormation Examples
 
-These are some very basic raw CloudFormation template examples.  This examples are part of blog tutorials.
+These are some very basic raw CloudFormation template examples.  This examples are part of the Introductory CloudFormation blog tutorials.
 
 1. [A Simple Introduction to AWS CloudFormation Part 1: EC2 Instance](https://medium.com/boltops/a-simple-introduction-to-aws-cloudformation-part-1-1694a41ae59d)
 2. [A Simple Introduction ot AWS CloudFormation Part 2: EC2 Instance and Route53](https://medium.com/boltops/a-simple-introduction-to-aws-cloudformation-part-2-d6d95ed30328)
@@ -46,4 +46,6 @@ aws cloudformation describe-change-set --stack-name example --change-set-name ch
 aws cloudformation execute-change-set --stack-name example --change-set-name changeset-1
 ```
 
+## Lono CloudFormation Tutorial Series
 
+You may also be interested in the [Lono CloudFormation Examples](https://github.com/tongueroo/lono-cloudformation-examples) from the [Lono CloudFormation Introduction Series](https://blog.boltops.com/2019/10/30/lono-cloudformation-framework-introduction-series-part-1-ec2-instance).
