@@ -1,5 +1,7 @@
 # CloudFormation Examples
 
+[![BoltOps Badge](https://img.boltops.com/boltops/badges/boltops-badge.png)](https://www.boltops.com)
+
 These are some very basic raw CloudFormation template examples.  This examples are part of the Introductory CloudFormation blog tutorials.
 
 1. [A Simple Introduction to AWS CloudFormation Part 1: EC2 Instance](https://medium.com/boltops/a-simple-introduction-to-aws-cloudformation-part-1-1694a41ae59d)
